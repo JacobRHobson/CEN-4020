@@ -1,0 +1,51 @@
+CREATE TABLE Users
+(
+	First_name TEXT NOT NULL,
+	Last_name TEXT NOT NULL,
+	Username TEXT NOT NULL,
+	Passwd TEXT NOT NULL,
+	user_id int(32) NOT NULL AUTO_INCREMENT,
+	viewPreference TEXT NOT NULL,
+	Points INT NOT NULL,
+	CONSTRAINT id PRIMARY KEY(user_id),
+	securityQ1 TEXT NOT NULL,
+	securityQ2 TEXT NOT NULL,
+	securityQ3 TEXT NOT NULL,
+	Theme int
+	
+);
+
+
+CREATE TABLE Calculations
+(
+	calacul_id  int(32) PRIMARY KEY NOT NULL,
+	user_id  int(32) REFERENCES Users(user_id),
+	calculDate DATE NOT NULL,
+	numberOfBands int(32) NOT NULL,
+	Result TEXT
+);
+
+CREATE TABLE BandChoice
+(
+	choiceBand_id int(32),
+	Color1 bit NOT NULL,
+	Color2 bit NOT NULL,
+	Color3 bit NOT NULL,
+	Color4 bit NOT NULL,
+	Color5 bit ,
+	Color6 bit ,
+	Color7 bit ,
+	Color8 bit ,
+	Color9 bit ,
+	Color10 bit,
+	user_id int(32) REFERENCES  Calculations(calcul_id)
+	
+);
+
+CREATE TABLE Reviews
+(
+	user_id  int(32) REFERENCES Users(user_id),
+	review TEXT NOT NULL,
+	rating int not null, 
+	reviewDate date
+);

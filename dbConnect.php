@@ -4,4 +4,10 @@
     $dbPassword = "";                // default
     $dbName = "resistorcalcapp";
     $conn = mysqli_connect($dbServerName, $dbUsername,$dbPassword, $dbName);        // Connect Database
-?>
+    if(!$conn)
+    {
+      echo "Connection erorr!";
+    }
+    else {
+      echo "Hey It is connected!";
+    }
