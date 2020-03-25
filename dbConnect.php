@@ -9,5 +9,5 @@
       echo "Connection erorr!";
     }
     else {
-      echo "Hey It is connected!";
+      session_start();
     }
