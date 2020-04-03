@@ -9,6 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import javafx.scene.control.Label;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 
 public class Registration extends Application {
     @Override
@@ -33,6 +35,13 @@ public class Registration extends Application {
         confpasswordTextField.setPromptText("Re-enter Password");
 
         Button button1 = new Button("Create Account");
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                String name = usernameTextField.getText();
+                String password = passwordTextField.getText();
+            }
+        });
 
         //Creating a Grid Pane
         GridPane gridPane = new GridPane();
