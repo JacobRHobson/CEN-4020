@@ -3,8 +3,8 @@ public class ResistorValueCalculator extends Activity{
 	private TextView firstBandColor, secondBandColor, multiplierColor,result,
 			toleranceColor;
 	private ImageButton getValue, home, about;
-	private String [] firstBandSpinner = {"Black","Brown","Red","Orange","Yellow","Green","Blue","Violet","Grey","White"};
-	private String [] secondBandSpinner = {"Black","Brown","Red","Orange","Yellow","Green","Blue","Violet","Grey","White","Gold","Silver"};
+	private String [] firstBand = {"Black","Brown","Red","Orange","Yellow","Green","Blue","Violet","Grey","White"};
+	private String [] secondBand = {"Black","Brown","Red","Orange","Yellow","Green","Blue","Violet","Grey","White","Gold","Silver"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
